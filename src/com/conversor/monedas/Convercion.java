@@ -6,11 +6,37 @@ public class Convercion {
     //Metodos para las converciones
     String base1;
     String base2;
-public void convercion1() {
-     this.base1 = "USD";
-     this.base2 = "MXN";
 
-}
+    public void convertir(int seleccion){
+        switch (seleccion){
+            case 1:
+                this.base1 = "USD";
+                this.base2 = "MXN";
+                break;
+            case 2:
+                this.base1 = "MXN";
+                this.base2 = "USD";
+                break;
+            case 3:
+                this.base1 = "USD";
+                this.base2 = "BRL";
+                break;
+            case 4:
+                this.base1 = "BRL";
+                this.base2 = "USD";
+                break;
+            case 5:
+                this.base1 = "USD";
+                this.base2 = "COP";
+                break;
+            case 6:
+                this.base1 = "COP";
+                this.base2 = "USD";
+                break;
+        }
+    }
+
+
 
     public String getBase1() {
         return base1;

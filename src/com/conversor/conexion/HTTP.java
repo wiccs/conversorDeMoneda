@@ -18,6 +18,8 @@ public class HTTP  {
     String base1;
     String base2;
 
+    String json;
+
    public void sendRequest (){
        String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + base1 +"/"+ base2;
        HttpRequest request = HttpRequest.newBuilder()
@@ -28,6 +30,7 @@ public class HTTP  {
            try {
                HttpResponse<String> response = cliente.send(request, HttpResponse.BodyHandlers.ofString());
                System.out.println(response.body());
+               this.json = response.body();
            } catch (IOException e) {
                throw new RuntimeException(e);
            } catch (InterruptedException e) {
@@ -45,13 +48,22 @@ public class HTTP  {
     public void setBase1(String base) {
         this.base1 = base;
     }
-
+    //----------------------------------------
     public String getBase2(){
         return base2;
     }
     public void setBase2(String base){
         this.base2 = base;
     }
+    //--------------------------------------
+    public String getJson(){
+       return json;
+    }
+
+    public void setJson(String json){
+       this.json = json;
+    }
+
 
 
 

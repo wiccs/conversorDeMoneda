@@ -16,8 +16,16 @@ public class Menu {
                 7- Salir.              
                 """;
 
+    public String cantidad = """
+            Ingrese la cantidad
+            """;
+
     public String getBienvenida() {
         return bienvenida;
+    }
+
+    public String getCantidad(){
+        return cantidad;
     }
 
 }
