@@ -14,8 +14,6 @@ Este proyecto es un conversor de monedas desarrollado en Java que utiliza la API
 git clone https://github.com/tu_usuario/conversor-de-monedas.git
 cd conversor-de-monedas
 
-markdown
-Copiar código
 
 2. **Configuración del proyecto:**
 - Asegúrate de tener Java y Gson configurados.
